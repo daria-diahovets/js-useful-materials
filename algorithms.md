@@ -3,7 +3,7 @@
 ## Content
 
 | №  | Paragraph                                                                                               |
-| -- | :---------------------------------------------------------------------------:                           |
+| -- | ----------------------------------------------------------------------------                            |
 | 1  | [What is an Algorithm in Programming?](#what-is-an-algorithm-in-programming)                            |
 | 2  | [Why are Algorithms Important?](#why-are-algorithms-important)                                          |
 | 3  | [Big "O" Notation (Complexity Analysis)](#big-o-notation-complexity-analysis)                           |
