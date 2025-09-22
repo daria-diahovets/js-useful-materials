@@ -2,20 +2,20 @@
 
 ## Content
 
-| №   |                                   Paragraph                                   |
-| --- | :---------------------------------------------------------------------------: |
-| 1   | [What is an Algorithm in Programming?](#what-is-an-algorithm-in-programming)  |
-| 2   |        [Why are Algorithms Important?](#why-are-algorithms-important)         |
-| 3   | [Big "O" Notation (Complexity Analysis)](#big-o-notation-complexity-analysis) |
-| 4   |      [Difficulty Rating of Algorithms](#difficulty-rating-of-algorithms)      |
-| 5   |                        [Linear Search](#linear-search)                        |
-| 6   |    [Binary Search (Iterative Approach)](#binary-search-iterative-approach)    |
-| 7   |                       [Selection Sort](#selection-sort)                       |
-| 8   |                          [Bubble Sort](#bubble-sort)                          |
-| 9   |                            [Factorial](#factorial)                            |
-| 10  |                            [Fibonachi](#fibonachi)                            |
-| 11  |             [Quick Sort (Hoare's sort)](#quick-sort-hoares-sort)              |
-| 12  |    [Binary Search (Recursive Approach)](#binary-search-recursive-approach)    |
+| №   |                                   Paragraph                                                             |
+| --- | :---------------------------------------------------------------------------:                           |
+|  1  | [What is an Algorithm in Programming?](#what-is-an-algorithm-in-programming)                            |
+|  2  | [Why are Algorithms Important?](#why-are-algorithms-important)                                          |
+|  3  | [Big "O" Notation (Complexity Analysis)](#big-o-notation-complexity-analysis)                           |
+|  4  | [Difficulty Rating of Algorithms](#difficulty-rating-of-algorithms)                                     |
+|  5  | [Linear Search](#linear-search)                                                                         |
+|  6  | [Binary Search (Iterative Approach)](#binary-search-iterative-approach)                                 |
+|  7  | [Selection Sort](#selection-sort)                                                                       |
+|  8  | [Bubble Sort](#bubble-sort)                                                                             |
+|  9  | [Factorial](#factorial)                                                                                 |
+| 10  | [Fibonachi](#fibonachi)                                                                                 |
+| 11  | [Quick Sort (Hoare's sort)](#quick-sort-hoares-sort)                                                    |
+| 12  | [Binary Search (Recursive Approach)](#binary-search-recursive-approach)                                 |
 
 ## What is an Algorithm in Programming?
 
