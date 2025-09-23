@@ -14,6 +14,8 @@
 |  10 | [Fibonachi](#fibonachi)                                                       |
 |  11 | [Quick Sort (Hoare's sort)](#quick-sort-hoares-sort)                          |
 |  12 | [Binary Search (Recursive Approach)](#binary-search-recursive-approach)       |
+|  13 | [Adjacency Matrix](#adjacency-matrix)                                         |
+|  14 | [Dijkstra's Algorithm](#dijkstras-algorithm)                                  |
 
 ## What is an Algorithm in Programming?
 
