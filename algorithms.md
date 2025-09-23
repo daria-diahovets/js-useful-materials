@@ -1,21 +1,19 @@
 # JavaScript Algorithms
 
-## Content
-
-| №  | Paragraph                                                                                               |
-| -- | ----------------------------------------------------------------------------                            |
-| 1  | [What is an Algorithm in Programming?](#what-is-an-algorithm-in-programming)                            |
-| 2  | [Why are Algorithms Important?](#why-are-algorithms-important)                                          |
-| 3  | [Big "O" Notation (Complexity Analysis)](#big-o-notation-complexity-analysis)                           |
-| 4  | [Difficulty Rating of Algorithms](#difficulty-rating-of-algorithms)                                     |
-| 5  | [Linear Search](#linear-search)                                                                         |
-| 6  | [Binary Search (Iterative Approach)](#binary-search-iterative-approach)                                 |
-| 7  | [Selection Sort](#selection-sort)                                                                       |
-| 8  | [Bubble Sort](#bubble-sort)                                                                             |
-| 9  | [Factorial](#factorial)                                                                                 |
-| 10 | [Fibonachi](#fibonachi)                                                                                 |
-| 11 | [Quick Sort (Hoare's sort)](#quick-sort-hoares-sort)                                                    |
-| 12 | [Binary Search (Recursive Approach)](#binary-search-recursive-approach)                                 |
+|   № | Content                                                                       |
+| --: | ----------------------------------------------------------------------------- |
+|   1 | [What is an Algorithm in Programming?](#what-is-an-algorithm-in-programming)  |
+|   2 | [Why are Algorithms Important?](#why-are-algorithms-important)                |
+|   3 | [Big "O" Notation (Complexity Analysis)](#big-o-notation-complexity-analysis) |
+|   4 | [Difficulty Rating of Algorithms](#difficulty-rating-of-algorithms)           |
+|   5 | [Linear Search](#linear-search)                                               |
+|   6 | [Binary Search (Iterative Approach)](#binary-search-iterative-approach)       |
+|   7 | [Selection Sort](#selection-sort)                                             |
+|   8 | [Bubble Sort](#bubble-sort)                                                   |
+|   9 | [Factorial](#factorial)                                                       |
+|  10 | [Fibonachi](#fibonachi)                                                       |
+|  11 | [Quick Sort (Hoare's sort)](#quick-sort-hoares-sort)                          |
+|  12 | [Binary Search (Recursive Approach)](#binary-search-recursive-approach)       |
 
 ## What is an Algorithm in Programming?
 
@@ -34,13 +32,13 @@ It’s like a recipe in cooking: given some inputs (ingredients), it tells you e
 
 **Common complexities:**
 
-- **O(1)** → Constant time (super fast, independent of input size). _Example: accessing an array element by index_.
-- **O(log n)** → Logarithmic time. _Example: binary search._
-- **O(n)** → Linear time. _Example: iterating through an array once._
-- **O(n log n)** → Log-linear. _Example: efficient sorting algorithms like merge sort, quicksort._
-- **O(n²)** → Quadratic time. _Example: simple bubble sort, nested loops over arrays._
-- **O(2^n)** → Exponential. _Example: recursive brute force for subsets._
-- **O(n!)** → Factorial. _Example: checking all permutations._
+- **O(1)** → Constant time (super fast, independent of input size). `Example: accessing an array element by index`.
+- **O(log n)** → Logarithmic time. `Example: binary search.`
+- **O(n)** → Linear time. `Example: iterating through an array once.`
+- **O(n log n)** → Log-linear. `Example: efficient sorting algorithms like merge sort, quicksort.`
+- **O(n²)** → Quadratic time. `Example: simple bubble sort, nested loops over arrays.`
+- **O(2^n)** → Exponential. `Example: recursive brute force for subsets.`
+- **O(n!)** → Factorial. `Example: checking all permutations.`
 
 ## Difficulty Rating of Algorithms
 
@@ -261,4 +259,119 @@ function recursiveBinarySearch(array, item, start, end) {
 }
 console.log(recursiveBinarySearch(array, 10, 0, array.length));
 console.log(count);
+```
+
+## Graphs, Breadth-first search in graph
+
+- A graph is an abstract data structure representing a set of vertices and a set of edges (an example of a graph is a map).
+
+![Breadth-first search in graph.](/images/github-graph.png)
+
+- This algorithm will use a queue data structure.
+- A queue (FIFO - First In First Out) - is a data structure consisting of certain elements. The principle is that elements are added to the end of the structure and retrieved from the beginning (a real-life example: a checkout line).
+
+![Queue structure.](/images/github-queue.png)
+
+```javascript
+const graph = {};
+graph.a = ["b", "c"];
+graph.b = ["f"];
+graph.c = ["d", "e"];
+graph.d = ["f"];
+graph.e = ["f"];
+graph.f = ["g"];
+
+function breadthSearch(graph, start, end) {
+  let queue = [];
+  queue.push(start);
+  while (queue.length > 0) {
+    const current = queue.shift();
+    if (!graph[current]) {
+      graph[current] = [];
+    }
+    if (graph[current].includes(end)) {
+      return true;
+    } else {
+      queue = [...queue, ...graph[current]];
+    }
+  }
+  return false;
+}
+console.log(breadthSearch(graph, "a", "g")); // true
+```
+
+## Adjacency Matrix
+
+An adjacency matrix is a square grid that represents the connections (edges) between nodes (vertices) in a graph. It's an n x n matrix for a graph with n vertices, where the value at position (i, j) is 1 if there's an edge from vertex i to vertex j, and 0 otherwise. For undirected graphs, the matrix is symmetric; for directed graphs, it's not necessarily symmetric.
+
+![Adjacency Matrix example.](/images/github-matrix.png)
+
+```javascript
+const matrix = [
+  [0, 1, 1, 0, 0, 0, 0],
+  [0, 0, 0, 0, 1, 0, 0],
+  [0, 0, 0, 1, 0, 1, 0],
+  [0, 0, 0, 0, 1, 0, 0],
+  [0, 0, 0, 0, 0, 0, 1],
+  [0, 0, 0, 0, 1, 0, 0],
+  [0, 0, 0, 0, 0, 0, 0],
+];
+```
+
+## Dijkstra's Algorithm
+
+Dijkstra's algorithm finds the shortest path from a single starting vertex to all other vertices in a weighted graph, provided all edge weights are non-negative. The algorithm works by iteratively selecting the unvisited vertex with the smallest known distance from the source, marking it as visited, and updating the distances to its adjacent vertices. It's a greedy algorithm that ensures the shortest path is found for each node by progressively exploring the graph.
+
+![Dijkstra's Algorithm.](/images/github_dijkstra.png)
+
+```javascript
+const graph = {};
+graph.a = { b: 2, c: 1 };
+graph.b = { f: 7 };
+graph.c = { d: 5, e: 2 };
+graph.d = { f: 2 };
+graph.e = { f: 1 };
+graph.f = { g: 1 };
+graph.g = {};
+
+function shortPath(graph, start, end) {
+  const costs = {};
+  const processed = [];
+  let neighbors = {};
+  Object.keys(graph).forEach((node) => {
+    if (node !== start) {
+      let value = graph[start][node];
+      costs[node] = value || 100000000;
+    }
+  });
+  let node = findNodeLowestCost(costs, processed);
+  while (node) {
+    const cost = costs[node];
+    neighbors = graph[node];
+    Object.keys(neighbors).forEach((neighbor) => {
+      let newCost = cost + neighbors[neighbor];
+      if (newCost < costs[neighbor]) {
+        costs[neighbor] = newCost;
+      }
+    });
+    processed.push(node);
+    node = findNodeLowestCost(costs, processed);
+  }
+  return costs;
+}
+
+function findNodeLowestCost(costs, processed) {
+  let lowestCost = 100000000;
+  let lowestNode;
+  Object.keys(costs).forEach((node) => {
+    let cost = costs[node];
+    if (cost < lowestCost && !processed.includes(node)) {
+      lowestCost = cost;
+      lowestNode = node;
+    }
+  });
+  return lowestNode;
+}
+
+console.log(shortPath(graph, "a", "g"));
 ```
