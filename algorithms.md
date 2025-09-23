@@ -343,7 +343,7 @@ function shortPath(graph, start, end) {
   Object.keys(graph).forEach((node) => {
     if (node !== start) {
       let value = graph[start][node];
-      costs[node] = value || 100000000;
+      costs[node] = value || 100000000; // Infinity
     }
   });
   let node = findNodeLowestCost(costs, processed);
@@ -357,6 +357,7 @@ function shortPath(graph, start, end) {
       }
     });
     processed.push(node);
+    if (node === end) break;
     node = findNodeLowestCost(costs, processed);
   }
   return costs;
