@@ -2,14 +2,25 @@
 
 The JavaScript event loop is a fundamental mechanism that enables asynchronous, non-blocking operations in a single-threaded environment. It continuously monitors the Call Stack and various queues, ensuring tasks are processed efficiently.
 
-|   № | Content                                  |
-| --: | ---------------------------------------- |
-|   1 | [JavaScript is Single-Threaded](#)       |
-|   2 | [What's Event Loop?](#)                  |
-|   3 | [What does it consist of Event Loop?](#) |
-|   4 | [Types of Tasks in JavaScript](#)        |
-|   5 | [How Event Loop works in JavaScipt?](#)  |
-|   6 | [Examples:](#)                           |
+|   № | Content                                                                                                                  |
+| --: | ------------------------------------------------------------------------------------------------------------------------ |
+|   1 | [JavaScript is Single-Threaded](#javascript-is-single-threaded)                                                          |
+|   2 | [What's Event Loop?](#whats-event-loop)                                                                                  |
+|   3 | [What does it consist of Event Loop?](#what-does-it-consist-of-event-loop)                                               |
+|   4 | [Types of Tasks in JavaScript](#types-of-tasks-in-javascript)                                                            |
+|   5 | [How Event Loop works in JavaScipt?](#how-event-loop-works-in-javascipt)                                                 |
+|   6 | [Crucial Points](#crucial-points)                                                                                        |
+|   7 | [Examples:](#examples)                                                                                                   |
+|   8 | [Example № 1 (Basic Synchronous and Asynchronous Code)](#example--1-basic-synchronous-and-asynchronous-code)             |
+|   9 | [Example № 2 (Microtasks with Promises)](#example--2-microtasks-with-promises)                                           |
+|  10 | [Example № 3 (Nested Microtasks)](#example--3-nested-microtasks)                                                         |
+|  11 | [Example № 4 (Event Listener and Promises)](#example--4-event-listener-and-promises)                                     |
+|  12 | [Example № 5 (Interleaving Promises and setTimeout)](#example--5-interleaving-promises-and-settimeout)                   |
+|  13 | [Example № 6 (Nested Promises with setTimeout)](#example--6-nested-promises-with-settimeout)                             |
+|  14 | [Example № 7 (Promise Chaining with setTimeout)](#example--7-promise-chaining-with-settimeout)                           |
+|  15 | [Example № 8 (Mixing Promise Resolution with Delays)](#example--8-mixing-promise-resolution-with-delays)                 |
+|  16 | [Example № 9 (Deeply Nested Promises in a Timer)](#example--9-deeply-nested-promises-in-a-timer)                         |
+|  17 | [Example № 10 (Compining Chained Promises and Timer Nesting)](#example--10-compining-chained-promises-and-timer-nesting) |
 
 **Useful links:**
 
