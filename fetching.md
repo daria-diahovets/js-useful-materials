@@ -15,11 +15,11 @@ A Promise is an object representing the eventual result (or failure) of an async
 It has 3 states:
 
 - pending -> operation hasn't finished yet.
-  ![Promise pending](/images/pending.png")
+  ![Promise-pending](/images/github_pending.png)
 - fulfilled -> operation finished successfully (resolve was called).
-  ![Promise fulfilled](/images/fulfilled.png")
+  ![Promise-fulfilled](/images/github_fulfilled.png)
 - rejected -> operation failed (reject wal called).
-  ![Promise rejected](/images/rejected.png")
+  ![Promise-rejected](/images/github_rejected.png)
 
 ```javascript
 const myPromise = new Promise((resolve, reject) => {
